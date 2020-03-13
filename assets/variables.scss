@@ -1,0 +1,590 @@
+// // Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+// //
+// // The variables you want to modify
+// // $font-size-root: 20px;
+
+$font1: 'Montserrat', sans-serif;
+$font2: 'Playfair Display', serif;
+$fs1920: 18px;
+$mainTextColor: #403637;
+$borderBottom: 1px solid #987A6E;
+$btnColor: #DD7D5C;
+$catalogTextColor: #987A6E;
+$catalogBtnBorder: 1px solid #D79081;
+$catalogBtnBackgrond: #DD7D5C;
+$catalogBtnColor: #FDFBFA;
+$catalogBackground: #FEFEFE;
+$catlogBorder: 1px solid #CBA696;
+$infoColor: #CBA696;
+$infoBg: #E8D4C9;
+$pt1920: 9.38em;
+
+
+.const {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.constLeft{
+    width: 915px;
+    height: 30%;    
+    margin-left: auto;
+}
+
+.constP {
+    font-family: $font2;
+    width: 100%; 
+    font-size: 16.6em;
+    letter-spacing: 0.01em;
+    color: #FCF9F7;
+    position: absolute;
+    left: -40px;
+}
+
+
+.descriptions{
+    width: 100%;
+    margin-bottom: 2.22em;
+    h2{
+        font-size: 2em;
+        font-family: $font2;
+        color: $mainTextColor;
+        font-weight: bold;
+        line-height: 50px;
+    }
+
+    p{
+        font-size: $fs1920;
+        color: $mainTextColor;
+        line-height: 130%;
+        margin-bottom: .61em;
+        font-weight: 500;
+    }
+}
+
+
+.button{
+    font-family: $font2;
+    font-weight: bold;
+    border: 1px solid $btnColor;
+    background: $btnColor;
+    color: #FDFBFA;
+    letter-spacing: 0.02em;
+    padding: .94em 2.77em;
+    margin-left: 5px;
+    box-shadow: 5px 5px 0 1px #FCF9F7, 5px 5px 0 2px $btnColor, 
+                -5px -5px 0 1px #FCF9F7, -5px -5px 0 2px $btnColor;
+    transition: box-shadow .5s ease, filter .5s ease;
+    outline: none;
+
+    &:hover{
+        filter: contrast(150%);
+        box-shadow: 1px 1px 0 1px  #FCF9F7, 1px 1px 0 2px $btnColor, 
+                -1px -1px 0 1px #FCF9F7, -1px -1px 0 2px $btnColor;
+    }
+    
+    &:active{
+        filter: contrast(300%);
+        box-shadow: 1px 1px 0 1px white, 1px 1px 0 2px $btnColor, 
+                -1px -1px 0 1px white, -1px -1px 0 2px $btnColor,
+                0 0 0 2px $btnColor inset, 0 0 0 4px white inset;
+    }
+}
+
+
+#contacts{
+    overflow: hidden;
+    .contacts{
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .cont {
+            @extend .descriptions;
+            margin-bottom: 0;
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            height: 100%;
+
+            .contacts__desc {
+                width: 54%;
+                height: 560px;
+                display: inline-flex;
+                flex-direction: column;
+            
+                .contacts__desc_wrap{
+                    max-width: 915px;
+                    width: 90%;
+                    margin-left: auto;
+                    position: relative; 
+                    height: 560px;
+
+                    
+                    .contacts__desc_bg {
+                        @extend .constLeft;
+                        width: 100%;
+                        position: relative;
+                        max-height: 360px;
+                        height: 560px;
+                        margin: 0;
+            
+                        p.bg {
+                            @extend .constP;
+                            font-size: 20em;
+                            position: absolute;
+                            top: 13%;
+                            left: -30px;
+                            margin: 0;
+                        }
+            
+                        .contacts__desc_text {
+                            max-width: 615px;
+                            width: 34em;
+                            width: 80%;
+                            position: relative;
+                            z-index: 3;
+                            padding-top: 4.27em;
+                            margin: 0 auto;
+            
+                            .contacts__desc_p {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+            
+                                p {
+                                    display: inline-flex;
+                                    padding-top: 54px;
+                                }
+            
+                                .contacts__desc_link {
+                                    width: 10.5em;
+                                    height: 1.38em;
+                                    padding-top: 54px;
+                                    font-size: 1em;
+                                    letter-spacing: 0.02em;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: flex-end;
+                                    
+
+                                    a{
+                                        color: $mainTextColor;
+                                        padding-bottom: 2px; 
+                                        border-bottom: $catlogBorder;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+            
+                    .contacts__desc_map {
+                        width: 100%;
+                        height: 200px;
+                        position: relative;
+                        bottom: 0;
+                        left: 0;
+                        
+                    }
+                }               
+            }
+
+            .contacts__question{
+                width: 46%;
+                // max-height: 560px;
+                height: 100%;
+                background: #FCF9F7;
+                position: relative;
+                z-index: 2;
+            
+                .contacts__question_wrap{
+                    max-width: 765px;
+                    width: 90%;
+                    height: 560px;
+                    margin-right: auto;          
+                }
+            
+                .contacts__question_form {
+                    max-width: 460px;
+                    width: 34em;
+                    padding-top: 4.27em;
+                    margin: 0 auto;
+
+                    .contacts__question_mainLabel {
+                        font-size: 2em;
+                        font-family: $font2;
+                        color: $mainTextColor;
+                        font-weight: bold;
+                        line-height: 50px;
+                    }
+
+                    .contacts__form{
+                        padding-left: .6em;
+                        margin-top: 2em;
+
+                        .input {
+                            display: block;
+                            width: 100%;
+                            font-size: 16px;
+                            border: none;
+                            border-bottom: $borderBottom;
+                            padding: 12px 14px;
+                            box-sizing: border-box;
+                            margin-bottom: 22px;
+                            outline: none;
+                        }
+
+                        textarea{
+                            overflow: auto;                           
+                        }
+
+                        /* Плавающий текст */
+                        .box-input {
+                            position: relative;
+                        }
+
+                        .box-input input, .box-input textarea  {
+                            border: none;
+                            border-bottom: $borderBottom;
+                            padding: 10px 0;
+                            background: inherit;
+                            background: #FCF9F7;
+                            max-width: 386px;
+                            color: $mainTextColor;
+
+                            &:focus{
+                                border-bottom-color: $mainTextColor;
+                            }
+                        }
+
+                        .box-input label {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            padding-top: 10px;
+                            color:$catalogTextColor;
+                            transition: .5s;
+                            pointer-events: none;
+                        }
+
+                        .box-input input:focus~label,
+                        .box-input textarea:focus~label,
+                        .box-input input:valid~label,
+                        .box-input textarea:valid~label{
+                            top: -25px;
+                            font-size: 12px;
+                            color: $infoColor;                           
+                        }
+
+                        /* Анимированный чекбокс */
+                        .chboxs{
+                            margin: 1.8em 0 2.7em .5em;
+                        }
+
+                        .recover {
+                            padding-left: .6em;;
+                            margin-top: 15px;
+                            font-size: 10px; 
+                            color: $mainTextColor;
+                            
+                            label[for='ckbox'],
+                            label[for='ckbox2'] {
+                                cursor: pointer;
+                                padding-left: 1.75em;
+                                width: 100%;
+                                display: block;
+                                position: relative;
+                            }
+
+                            label[for='ckbox']::before,
+                            label[for='ckbox2']::before {
+                                content: '';
+                                position: absolute;
+                                border: $catlogBorder;
+                                width: 10px;
+                                height: 10px;
+                                top: -2px;
+                                left: 0;
+                                transition: .2s;
+                            }
+
+                            #ckbox:checked+label::before,
+                            #ckbox2:checked+label::before {
+                                border-top: 2px solid transparent;
+                                border-left: 2px solid transparent;
+                                border-right: 2px solid $catalogTextColor;
+                                border-bottom: 2px solid $catalogTextColor;
+                                transform: rotate(40deg);
+                                width: 6px;
+                                height: 11px;
+                                transform-origin: 100% 100%;
+                                top: -4px;
+                                left: -5px;
+                            }
+
+                            #ckbox:not(:checked),
+                            #ckbox2:not(:checked),
+                            #ckbox:checked,
+                            #ckbox2:checked {
+                                display: none;
+                            }
+                        }
+
+                    }
+  
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 2000px) {
+    p.bg {
+        font-size: 18.8em !important;
+    }
+    .contacts__question, .contacts__desc {
+        width: 50% !important;
+        max-width: 5000px !important;
+    }
+    .contacts__question_wrap, .contacts__desc_wrap{
+        max-width: 840px !important;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    #contacts{
+        .pt2{
+            padding-top: 97px !important;
+        }
+
+        .contacts__desc {
+            width: 49% !important;
+
+        }
+
+        .contacts__question{
+            width: 51% !important;
+        }
+
+        .contacts__desc_wrap{
+            margin: 0 !important;
+            width: 100% !important;
+
+        }
+
+        .contacts__desc_bg {
+            height: 360px !important;
+            max-width: 700px !important;
+            margin-left: 100px !important;
+
+
+            p.bg {
+                font-size: 220px!important;
+                top: 45% !important;
+                letter-spacing: 0.08em !important;
+                }
+            }
+
+    
+
+        .contacts__desc_text{
+            margin: 0 0 0 20px !important;
+            max-width: 460px !important;
+            padding-right: 30px;
+            height: 300px !important;
+
+            h2 {
+                padding-bottom: 54px;
+            }
+        }
+
+        .contacts__desc_p {
+            p{
+                padding-top: 15px !important;
+            }
+
+            .contacts__desc_link {
+                padding-top: 0 !important;
+                font-size: 16px !important;
+            }
+            
+            
+        }
+
+
+    }
+
+
+   
+}
+
+@media screen and (max-width: 1250px) {
+    .wrapper{
+        max-width: 960px !important;
+    }
+    .contacts__desc_p{
+        max-width: 420px !important;
+    }
+    #contacts{ 
+        .contacts__desc_bg {
+            margin-left: 50px !important;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1199px){
+
+    #contacts{
+        .pt2 {
+            padding-top: 22px !important;
+        }
+        .cont {
+            flex-direction: column;
+            position: relative;           
+        }
+        .contacts__question, .contacts__desc {
+            width: 100% !important;
+        }
+
+        .contacts__desc{
+            height: 200px !important;
+        }
+
+        .contacts__question {
+            height: 500px !important;
+            margin-bottom: 200px;
+        }
+
+        .contacts__desc_wrap {
+            width: 100% !important;
+            height: 200px !important;
+            max-width: 1200px !important;
+            position: static !important;
+            .contacts__desc_bg {
+                margin: 0 auto !important;
+                width: 685px !important;
+                height: 200px !important;
+
+                p{
+                    top: 0 !important;
+                    left: -70px !important;
+                }
+
+                .contacts__desc_text {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                    width: 685px !important;
+                    max-width: 685px !important;
+                    height: 230px !important;
+                     
+
+                    h2 {
+                        padding: 30px 0 !important;
+                    }
+
+                    
+
+                    .contacts__desc_p{
+                        max-width: 500px !important;
+                        align-items: flex-start !important;
+                        p {
+                            padding-top: 0 !important;
+                            padding-bottom: 8px !important;                            
+                        }
+                    }
+                }
+            }
+        }
+
+        .contacts__question {
+            height: 555px !important;    
+        }
+
+        .contacts__question_wrap {
+            width: 100% !important;
+            height: 600px !important;
+            max-width: 1200px !important;
+        }
+
+        .contacts__desc_map {
+            
+            position: absolute !important;
+            
+            
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 760px){
+    .wrapper {
+        width: 580px !important;
+    }
+    #contacts{
+        .contacts__desc_wrap {
+            .contacts__desc_bg {
+                width: 580px !important;
+
+                .contacts__desc_text {
+                    width: 580px !important;
+                    max-width: 580px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    #contacts{       
+        .cont {
+            position: static !important;           
+        }
+
+        .contacts__desc_wrap {
+
+            .contacts__desc_bg {
+                width: 320px !important;
+                min-height: 300px !important;
+
+                .contacts__desc_text {
+                    width: 270px !important;
+                    max-width: 270px !important;
+                    margin: 0 auto !important;
+                    min-height: 300px !important;
+
+                    .contacts__desc_p {
+                        flex-direction: column !important;
+                    }
+                }
+            }
+        } 
+        
+        .contacts__question {
+            margin-top: 100px !important;
+
+            .contacts__question_form {
+                width: 270px !important;
+                padding-top: 30px !important;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

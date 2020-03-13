@@ -1,0 +1,31 @@
+{
+  "name": "proj",
+  "version": "1.0.0",
+  "description": "My well-made Nuxt.js project",
+  "author": "Naya Naya",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.5",
+    "@types/leaflet": "^1.5.11",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "leaflet": "^1.6.0",
+    "node-sass": "^4.13.1",
+    "nuxt": "^2.0.0",
+    "nuxt-leaflet": "0.0.21",
+    "sass-loader": "^8.0.2",
+    "vue-the-mask": "^0.11.1",
+    "vue2-leaflet": "^2.5.2"
+  },
+  "devDependencies": {
+    "@mdi/js": "^4.9.95",
+    "@nuxtjs/vuetify": "^1.0.0",
+    "nodemon": "^1.18.9"
+  }
+}

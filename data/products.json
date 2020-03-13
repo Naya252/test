@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "title": "2778-10 Пусеты",
+        "description": "Золото, бриллианты 66 шт. 0,368ct, сапфир 8 шт., турмалин 2 шт.",
+        "price": 203720,
+        "image": "./img/image88.jpg"
+    },        
+    {
+        "id": 2,
+        "title": "2804-10 Пусеты",
+        "description": "Золото, бриллианты 8 шт. 0,219ct, опал 10 шт. 4,47ct",
+        "price": 71730,
+        "image": "./img/image89.jpg"
+    },
+    {
+        "id": 3,
+        "title": "0109/3-10 Пусеты",
+        "description": "Золото, брилианты 2 шт. 0,219ct, рубин 54 шт. 0,474ct",
+        "price": 70820,
+        "image": "./img/image90.jpg"
+    },
+    {
+        "id": 4,
+        "title": "0057-10 Пусеты",
+        "description": "Золото, бриллианты 90 шт. 0,545ct | 3/4",
+        "price": 63800,
+        "image": "./img/image91.jpg"
+    },
+    {
+        "id": 5,
+        "title": "0053-10 Пусеты",
+        "description": "Золото, бриллианты 2 шт. 0,204ct | 3/5",
+        "price": 41460,
+        "image": "./img/image92.jpg"
+    },
+    {
+        "id": 6,
+        "title": "0101/6-10 Пусеты",
+        "description": "Золото, бриллианты 30 шт. 0,134ct, танзанит 2 шт. 1,19ct",
+        "price": 39470,
+        "image": "./img/image93.jpg",
+        "publishing": "Питер"
+    },
+    {
+        "id": 7,
+        "title": "0025-10 Пусеты",
+        "description": "Золото, бриллианты 2 шт. 0,197ct  | 3/3",
+        "price": 37850,
+        "image": "./img/image94.jpg",
+        "publishing": "Питер"
+    },
+    {
+        "id": 8,
+        "title": "0043-10 Пусеты",
+        "description": "Золото, бриллианты 14 шт. 0,356ct | 3/5",
+        "price": 35895,
+        "image": "./img/image95.jpg"
+    }
+]
