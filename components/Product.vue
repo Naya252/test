@@ -39,13 +39,29 @@
                     </span>   
                     <v-spacer></v-spacer>
 
-                    <v-btn                    
+                    <v-btn  link :to="{name:'productcard-id', params:{id:product.id}}"                  
+                        class="btn-card" 
+                    >Подробнее</v-btn> 
+
+                    <v-btn 
+                        v-on:click="addToCart(product)" 
+                        v-if="canAddToCart(product)"
+                        class="ma-2" outlined 
+                        color="deep-purple darken-4"
+                    >Добавить в корзину</v-btn>
+                    <v-btn v-else 
+                        disabled
+                        class="ma-2" outlined 
+                        color="deep-purple darken-4"
+                    >Добавить в корзину</v-btn>
+
+                    <!-- <v-btn                    
                         class="btn-card" 
                         @click="overlay = !overlay"
-                    >Примерить</v-btn> 
+                    >Примерить</v-btn>  -->
                 </v-row>
             </v-card-text>
-            <v-overlay                   
+            <!-- <v-overlay                   
                     :value="overlay"                    
                     >
                          <v-dialog v-model="dialog" persistent max-width="800px">
@@ -144,7 +160,7 @@
                                 
                                 </v-card>
                             </v-dialog>
-             </v-overlay>         
+             </v-overlay>          -->
         </v-card>
     </v-hover>
 </v-col>
@@ -191,7 +207,7 @@
         },
         props:['product'],
         computed:{
-            ...mapState(['products'])
+            ...mapState(['products', 'cart'])
         },
         methods:{
             validate () {
@@ -200,6 +216,21 @@
                 }
             },
             onSubmit () {
+            },
+            addToCart: function(product){
+                this.$store.commit('addToCart', product.id);
+            },
+            canAddToCart: function(product){
+                return product.availableInventory > this.cartCountFn(product.id);
+            },
+            cartCountFn: function(id){
+                let itemCount = 0;
+                
+                for(let i = 0; i < this.cart.length; i++)
+                    if(this.cart[i] === id)
+                        itemCount++;
+                        
+                return itemCount;                        
             }
         },
         filters: {

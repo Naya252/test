@@ -38,7 +38,7 @@
         <transition name="bounce" mode="out-in">
             <span class="inline-block" v-if="product.availableInventory - cartCountFn(product.id) === 0" key="1">Нет в наличии</span>
             <span class="inline-block" v-else-if="product.availableInventory - cartCountFn(product.id) < 5" key="">Осталось только {{product.availableInventory - cartCountFn(product.id)}}</span>
-            <span class="inline-block" v-else key="">Осталось много</span>
+            <span class="inline-block" v-else key="">Есть в наличии</span>
         </transition>
         
     </v-col>

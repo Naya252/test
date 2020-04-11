@@ -41,7 +41,19 @@
                   <main-logo />
               </v-img>
             </v-btn>
+            <v-toolbar-title class="deep-purple--text text--darken-4">{{sitename}}</v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn icon link :to="{name:'checkout'}">
+                <v-badge
+                    color="deep-purple"
+                    left bottom
+                >
+                    <template v-slot:badge>
+                      <span>{{cartItemCount}}</span>
+                    </template>
+                    <v-icon>mdi-cart</v-icon>
+                </v-badge>
+            </v-btn>
       <v-btn class="mx-2" fab small dark color="green accent-3" href="https://wa.me/79119118795" target="_blank">
         <v-icon dark>mdi-whatsapp</v-icon>
       </v-btn>
@@ -50,9 +62,6 @@
         <v-icon dark>mdi-telegram</v-icon>
       </v-btn>
 
-      <v-btn class="mx-2" fab small dark color="blue darken-3" href="https://vk.me/id447631784" target="_blank">
-        <v-icon dark>mdi-vk</v-icon>
-      </v-btn>
 
      
       <!-- <v-toolbar-title class="deep-purple--text text--darken-4">{{sitename}}</v-toolbar-title> -->
@@ -119,6 +128,7 @@ export default {
     return {
       clipped: false,
       drawer: false,
+      showDrawer: false,
       fixed: false,
       items: [
         {
@@ -151,6 +161,7 @@ export default {
   },
   computed:{
     ...mapState(['sitename']),
+    ...mapGetters(['cartItemCount']),
   },
   components: {
     MainLogo
